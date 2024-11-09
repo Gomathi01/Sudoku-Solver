@@ -1,0 +1,62 @@
+.Main{
+  text-align:center;
+  
+}
+.Header{
+  background-color: rgb(89, 85, 85);
+  display: grid;
+  color: white;
+  gap: 5px;
+  
+}
+.grid-table{
+  display: flex;
+  align-items: center;
+  margin-left: 40%;
+
+}
+.CellInput{
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  padding: 0px;
+  text-align: center;
+  border: 1px solid black;
+}
+table{
+  border-collapse: collapse;
+}
+td{
+  padding: 0px;
+}
+.buttonContainer{
+margin-top: 20px0;
+}
+.solveButton{
+  background-color: orange;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+}
+.checkButton{
+  background-color: tomato;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+}
+.resetButton{
+  background-color: aqua;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+}
+.bBorder{
+  border-bottom:  2px solid black;
+}
+.bBorder{border-bottom: 2px solid black;}
