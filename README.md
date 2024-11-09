@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+# Sudoku-Solver
+Project Description
+This project is a Sudoku Solver application created with React. Users can interact with a 9x9 Sudoku grid, where they can manually enter numbers, check if the current state is solvable or completed, solve the entire puzzle automatically, or reset the grid.
+Features
+- **Interactive Grid**: Users can fill in numbers manually in each cell.
+- **Check Solution**: Validates if the current Sudoku state is on track to be solved.
+- **Solve Sudoku**: Automatically solves the puzzle using a backtracking algorithm.
+- **Reset Puzzle**: Resets the grid to its initial state.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Install the dependencies: npm install
+start the project : npm start
+Code Overview
+Key Components and Functions
+SudokuSolver Component: Main React component containing the Sudoku grid, input handlers, and button actions.
 
-## Available Scripts
+getDeepCopy: Creates a deep copy of the initial Sudoku grid to prevent state mutations.
 
-In the project directory, you can run:
+onInputChange: Handles user input in each grid cell. This function ensures that only valid numbers (1-9) are entered, and updates the Sudoku grid accordingly.
 
-### `npm start`
+CompareSudokus: Compares the current grid with the solved grid to check if the puzzle is solved or if it can be solved from the current state. Returns an object indicating if the puzzle is complete or solvable.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Solver: A recursive function implementing the backtracking algorithm to find a solution for the Sudoku puzzle. It uses helper functions to ensure the numbers follow Sudoku rules.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Helper Functions:
 
-### `npm test`
+checkRow, checkCol, checkBox: Validate if a number can be placed in a row, column, or 3x3 subgrid without violating Sudoku rules.
+checkValid: Combines the above functions to confirm a valid placement.
+getNext: Determines the next cell to check based on the current position.
+checksoduku: Compares the current state of the grid to a solved version. Alerts the user if the puzzle is complete, unsolvable, or incomplete but still solvable.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+solvesoduku: Solves the puzzle by using the Solver function and updates the grid with the solution.
 
-### `npm run build`
+resetsoduku: Resets the Sudoku grid to its original, unsolved state.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
